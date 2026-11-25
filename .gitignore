@@ -1,0 +1,7 @@
+build/
+*.user
+data.json
+data.json.bak
+*.docx
+.claude/
+CLAUDE.md

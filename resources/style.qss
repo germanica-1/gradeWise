@@ -1,0 +1,174 @@
+/* All colors and fonts live here. Navy sidebar, light content, white cards, blue accent. */
+
+QWidget {
+    font-size: 14px;
+    color: #1E2A44;
+}
+
+QMainWindow, QStackedWidget, QScrollArea > QWidget > QWidget {
+    background: #F5F7FB;
+}
+
+/* Sidebar */
+#sidebar {
+    background: #1E2A44;
+    border: none;
+    padding-top: 24px;
+    outline: 0;
+}
+#sidebar::item {
+    border: none; /* Qt only applies item padding when a border is set */
+    color: #C9D3E6;
+    padding: 14px 24px;
+    font-size: 15px;
+}
+#sidebar::item:hover {
+    background: #2A3A5C;
+}
+#sidebar::item:selected {
+    background: #3B6FE0;
+    color: white;
+    font-weight: bold;
+}
+
+/* Text styles */
+#pageTitle {
+    font-size: 26px;
+    font-weight: bold;
+}
+#sectionTitle {
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+#cardTitle, #mutedText {
+    color: #7A869A;
+}
+#tipText {
+    color: #7A869A;
+    font-size: 12px;
+}
+#directionText {
+    color: #3B6FE0;
+    font-weight: bold;
+}
+#cardValue {
+    font-size: 30px;
+    font-weight: bold;
+}
+#totalsText {
+    font-weight: bold;
+}
+#errorText {
+    color: #D64545;
+    font-weight: bold;
+}
+#warningText {
+    color: #B07D00;
+    font-weight: bold;
+}
+#successText {
+    color: #2E9E5B;
+    font-weight: bold;
+}
+
+/* Cards and status banner */
+#card {
+    background: white;
+    border: 1px solid #E3E8F0;
+    border-radius: 12px;
+}
+#statusBanner {
+    border-radius: 12px;
+}
+#statusTitle {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+#statusDetail {
+    color: white;
+    font-size: 15px;
+}
+
+/* Inputs */
+QLineEdit, QDoubleSpinBox, QSpinBox, QComboBox {
+    background: white;
+    border: 1px solid #CBD3E1;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+/* Drop-down list of the preset combo box (was black under dark system themes) */
+QComboBox QAbstractItemView {
+    background: white;
+    color: #1E2A44;
+    border: 1px solid #CBD3E1;
+    selection-background-color: #DCE6FB;
+    selection-color: #1E2A44;
+    outline: 0;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 28px;
+    padding: 4px 8px;
+}
+
+/* Styled spin boxes lose their arrow icons; hide the buttons (keyboard arrows and mouse wheel still step). */
+QAbstractSpinBox::up-button, QAbstractSpinBox::down-button {
+    width: 0;
+    border: none;
+}
+QLineEdit:focus, QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus {
+    border: 1px solid #3B6FE0;
+}
+
+/* Buttons */
+QPushButton {
+    background: white;
+    border: 1px solid #CBD3E1;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+QPushButton:hover {
+    background: #EEF2FA;
+}
+QPushButton:disabled {
+    color: #A9B2C3;
+}
+#primaryButton {
+    background: #3B6FE0;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+#primaryButton:hover {
+    background: #2F5CC4;
+}
+#primaryButton:disabled {
+    background: #A9BDE9;
+}
+#dangerButton {
+    color: #D64545;
+}
+
+/* Table and feedback text */
+QTableWidget {
+    background: white;
+    alternate-background-color: #F8FAFD;
+    border: 1px solid #E3E8F0;
+    border-radius: 12px;
+    gridline-color: #EEF1F6;
+    selection-background-color: #DCE6FB;
+    selection-color: #1E2A44;
+}
+QHeaderView::section {
+    background: #F0F3F9;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+}
+#feedbackOutput {
+    background: white;
+    border: 1px solid #E3E8F0;
+    border-radius: 12px;
+    padding: 12px;
+}
